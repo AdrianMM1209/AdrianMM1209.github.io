@@ -299,3 +299,35 @@ button:hover {
 .product:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
 }
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2em; /* Ajusta el tamaño del título en móviles */
+    }
+}
+@media (max-width: 767px) {
+    footer {
+        font-size: 0.9em; /* Ajusta el tamaño del texto en el footer en móviles */
+    }
+}
+@media (max-width: 767px) {
+    footer {
+        padding: 10px 0; /* Reduce el padding del footer en móviles */
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2em; /* Ajusta el tamaño del título en móviles */
+    }
+
+    footer {
+        font-size: 0.9em; /* Ajusta el tamaño del texto en el footer en móviles */
+        padding: 10px 0; /* Reduce el padding del footer en móviles */
+    }
+
+    .product {
+        width: calc(100% - 20px); /* Aumenta el ancho del producto en móviles */
+        margin: 10px auto; /* Centra el producto */
+        max-width: 90%; /* Establece un ancho máximo para evitar que se alarguen demasiado */
+    }
+}
