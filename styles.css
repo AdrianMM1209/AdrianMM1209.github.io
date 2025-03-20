@@ -318,7 +318,7 @@ footer .social-media a:hover {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px)   {
     .seccion-12k {
         display: block !important; /* Asegura que la sección se muestre */
         visibility: visible !important; /* Asegura que la sección sea visible */
@@ -326,3 +326,26 @@ footer .social-media a:hover {
         padding: 10px; /* Añade un poco de padding para que se vea bien */
         background-color: #f4f4f4; /* Color de fondo para que sea visible */
     }
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2em; /* Reduce el tamaño del título en móviles */
+        margin: 0; /* Elimina el margen para evitar cortes */
+        padding: 0 10px; /* Añade un poco de padding para que no toque los bordes */
+        text-align: center; /* Centra el título */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Ajusta el tamaño del subtítulo en móviles */
+        margin: 10px 0; /* Espacio alrededor del subtítulo */
+    }
+
+    .seccion-12k {
+        display: block !important; /* Asegura que la sección se muestre */
+        visibility: visible !important; /* Asegura que la sección sea visible */
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        padding: 10px; /* Añade un poco de padding para que se vea bien */
+        background-color: #f4f4f4; /* Color de fondo para que sea visible */
+        margin: 0; /* Elimina márgenes que puedan causar cortes */
+    }
+}
