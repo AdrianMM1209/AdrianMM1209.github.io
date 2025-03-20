@@ -300,6 +300,7 @@ footer .social-media a:hover {
         flex: 1 1 auto; /* Permite que los elementos se ajusten automáticamente */
         margin: 5px; /* Espacio entre los elementos de la lista */
         text-align: center; /* Centra el texto en los elementos de la lista */
+        min-width: 100px; /* Establece un ancho mínimo para los elementos de la lista */
     }
 
     nav ul li a {
@@ -316,6 +317,7 @@ footer .social-media a:hover {
         background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para el enlace */
     }
 }
+
 @media (max-width: 767px) {
     .seccion-12k {
         display: block !important; /* Asegura que la sección se muestre */
@@ -324,4 +326,3 @@ footer .social-media a:hover {
         padding: 10px; /* Añade un poco de padding para que se vea bien */
         background-color: #f4f4f4; /* Color de fondo para que sea visible */
     }
-}
