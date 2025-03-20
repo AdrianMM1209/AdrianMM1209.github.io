@@ -308,5 +308,11 @@ footer .social-media a:hover {
         width: 100%; /* Asegura que el enlace ocupe el ancho completo */
         box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
         text-align: center; /* Centra el texto del enlace */
+        color: #fff; /* Asegura que el texto sea visible */
+        text-decoration: none; /* Elimina el subrayado */
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para el enlace */
     }
 }
