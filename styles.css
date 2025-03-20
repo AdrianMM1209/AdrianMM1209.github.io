@@ -13,6 +13,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column; /* Organiza el contenido en columnas */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal en general */
 }
 
 header {
@@ -232,7 +233,6 @@ footer .social-media a:hover {
         display: block; /* Cambia a bloque para apilar los elementos */
         margin: 5px 0; /* Espacio entre los elementos de la lista */
     }
-
     .product-container {
         flex-direction: column; /* Apila los productos verticalmente */
         align-items: center; /* Centra los productos */
@@ -240,15 +240,16 @@ footer .social-media a:hover {
 
     .product {
         margin: 10px 0; /* Espacio vertical entre productos */
-        max-width: 90%; /* Ancho máximo del producto en móviles */
+        width: calc(100% - 20px); /* Aumenta el ancho del producto en móviles */
+        max-width: 90%; /* Establece un ancho máximo para evitar que se alarguen demasiado */
     }
 
     h1 {
-        font-size: 2.5em; /* Tamaño del título en móviles */
+        font-size: 2.5em; /* Ajusta el tamaño del título en móviles */
     }
 
     h2 {
-        font-size: 1.5em; /* Tamaño del subtítulo en móviles */
+        font-size: 1.5em; /* Ajusta el tamaño del subtítulo en móviles */
     }
 
     p {
@@ -259,75 +260,10 @@ footer .social-media a:hover {
         padding: 8px 16px; /* Ajusta el padding del botón en móviles */
         font-size: 0.9em; /* Tamaño del texto del botón en móviles */
     }
-}
-body {
-    transition: background-color 1s ease; /* Aumenta la duración de la transición */
-}
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in; /* Aumenta la duración de la transición */
-}
-
-.fade-in.active {
-    opacity: 1;
-}
-h1 {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
-    transition: text-shadow 0.5s ease; /* Transición suave para la sombra */
-}
-
-h1:hover {
-    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7); /* Aumenta la sombra al pasar el ratón */
-}
-button {
-    transition: transform 0.3s ease; /* Transición suave para el escalado */
-}
-
-button:hover {
-    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el ratón */
-}
-@media (max-width: 767px) {
-    .product {
-        max-width: 48%; /* Permite que dos productos se alineen en pantallas pequeñas */
-    }
-}
-button:hover {
-    background: #218838;
-    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el ratón */
-}
-
-.product:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
-}
-@media (max-width: 767px) {
-    h1 {
-        font-size: 2em; /* Ajusta el tamaño del título en móviles */
-    }
-}
-@media (max-width: 767px) {
-    footer {
-        font-size: 0.9em; /* Ajusta el tamaño del texto en el footer en móviles */
-    }
-}
-@media (max-width: 767px) {
-    footer {
-        padding: 10px 0; /* Reduce el padding del footer en móviles */
-    }
-}
-
-@media (max-width: 767px) {
-    h1 {
-        font-size: 2em; /* Ajusta el tamaño del título en móviles */
-    }
 
     footer {
         font-size: 0.9em; /* Ajusta el tamaño del texto en el footer en móviles */
         padding: 10px 0; /* Reduce el padding del footer en móviles */
     }
-
-    .product {
-        width: calc(100% - 20px); /* Aumenta el ancho del producto en móviles */
-        margin: 10px auto; /* Centra el producto */
-        max-width: 90%; /* Establece un ancho máximo para evitar que se alarguen demasiado */
-    }
 }
+    
