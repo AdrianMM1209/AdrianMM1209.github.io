@@ -311,3 +311,13 @@ main {
         margin: 10px auto; /* Centra el producto */
     }
 }
+body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal en general */
+}
+@media (max-width: 767px) {
+    .product {
+        width: calc(100% - 20px); /* Aumenta el ancho del producto en móviles */
+        margin: 10px auto; /* Centra el producto */
+        max-width: 400px; /* Establece un ancho máximo para evitar que se alarguen demasiado */
+    }
+}
