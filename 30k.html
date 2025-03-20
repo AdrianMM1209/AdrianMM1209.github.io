@@ -6,6 +6,70 @@
     <title>Vaper de 30,000 Caladas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            transition: background-color 1s ease;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+        }
+
+        .product-container {
+            display: flex; /* Utiliza flexbox para alinear los productos */
+            justify-content: center; /* Centra los productos horizontalmente */
+            gap: 20px; /* Espacio entre los productos */
+            flex-wrap: wrap; /* Permite que los productos se envuelvan en pantallas pequeñas */
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%; /* Asegura que el producto ocupe el ancho completo de la celda */
+            max-width: 400px; /* Ancho máximo del producto */
+            margin: 20px; /* Margen alrededor de cada producto */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Aumenta el tamaño del producto al pasar el ratón */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+            z-index: 1; /* Asegura que el producto hover esté por encima de los demás */
+        }
+
+        .product-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: left; /* Alinea el texto a la izquierda */
+        }
+
+        .product-info h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .product-info p {
+            font-size: 1em;
+            margin: 0 0 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,13 +78,14 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="50k.html">50,000 Caladas</a></li>
+                <li><a href="30k.html">30,000 Caladas</a></li>
                 <li><a href="25k.html">25,000 Caladas</a></li>
                 <li><a href="12k.html">12,000 Caladas</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="fade-in">
         <h2>Vaper de 30,000 Caladas</h2>
 
         <div class="product-container">
@@ -31,7 +96,9 @@
                 <div class="product-info">
                     <h2>Vaper de 30,000 Caladas</h2>
                     <p>Perfecto para el uso diario, este vaper combina portabilidad y duración en un solo dispositivo.</p>
-                    <button>Comprar Ahora</button>
+                    <a href="https://api.whatsapp.com/send?phone=6788488701&text=Hola%20👋, quiero comprar el Vaper de 30,000 Caladas. 🌟" target="_blank">
+                        <button>Pide tu Vape</button>
+                    </a>
                 </div>
             </div>
 
@@ -42,7 +109,9 @@
                 <div class="product-info">
                     <h2>Vaper de 30,000 Caladas - Modelo 2</h2>
                     <p>Este modelo ofrece un diseño elegante y un sabor excepcional, ideal para los amantes del vapeo.</p>
-                    <button>Comprar Ahora</button>
+                    <a href="https://api.whatsapp.com/send?phone=6788488701&text=Hola%20👋, quiero comprar el Vaper de 30,000 Caladas - Modelo 2. ✨" target="_blank">
+                        <button>Pide tu Vape</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -52,8 +121,11 @@
         <p>&copy; 2023 Vapers Desechables. Todos los derechos reservados.</p>
     </footer>
 
-    <a href="https://api.whatsapp.com/send?phone=678488701" class="whatsapp_float" target="_blank">
-        <i class="fab fa-whatsapp whatsapp-icon"></i>
-    </a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const mainContent = document.querySelector('main');
+            mainContent.classList.add('active'); // Activa el efecto de desvanecimiento
+        });
+    </script>
 </body>
 </html>

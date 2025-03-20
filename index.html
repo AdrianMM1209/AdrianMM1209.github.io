@@ -3,15 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vapers Desechables</title>
+    <title>Inicio - Vapers Desechables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 1s ease;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+        }
+
+        header {
+            background: linear-gradient(90deg, #000, #333);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff4081; /* Color destacado al pasar el ratón */
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .product-info h3 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .product-info p {
+            font-size: 1em;
+            margin: 0 0 20px;
+        }
+
+        button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .social-media {
+            margin-top: 10px;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-media a:hover {
+            color: #ff4081; /* Color rosa al pasar el ratón sobre los enlaces de redes sociales */
+        }
+
+        @media (max-width: 767px) {
+            .product {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Vapers Desechables</h1>
         <nav>
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="50k.html">50,000 Caladas</a></li>
                 <li><a href="30k.html">30,000 Caladas</a></li>
                 <li><a href="25k.html">25,000 Caladas</a></li>
@@ -20,31 +164,85 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Bienvenido a la Mejor Experiencia de Vapeo</h2>
-        <p>En Vapers Desechables, nos enorgullecemos de ofrecerte una amplia gama de vapers desechables de alta calidad, diseñados para satisfacer todas tus necesidades de vapeo. Ya seas un principiante o un experto, tenemos el dispositivo perfecto para ti.</p>
-        
-        <p>¿Por qué elegir nuestros vapers desechables? Aquí te damos algunas razones:</p>
-        <ul>
-            <li><strong>Variedad de Sabores:</strong> Desde frutas frescas hasta sabores clásicos, tenemos algo para todos los gustos.</li>
-            <li><strong>Duración Prolongada:</strong> Nuestros vapers ofrecen desde 12,000 hasta 50,000 caladas, asegurando que siempre tengas una experiencia satisfactoria.</li>
-            <li><strong>Fácil de Usar:</strong> No necesitas ser un experto para disfrutar de nuestros vapers. Simplemente abre el paquete y comienza a vapear.</li>
-            <li><strong>Portabilidad:</strong> Diseñados para ser ligeros y compactos, nuestros vapers son perfectos para llevar a cualquier lugar.</li>
-            <li><strong>Calidad Garantizada:</strong> Trabajamos con los mejores fabricantes para asegurarte que cada calada sea deliciosa y segura.</li>
-        </ul>
-
-        <p>Imagina disfrutar de un vapeo suave y sabroso en cualquier momento del día. Ya sea que estés en casa, en el trabajo o en una salida con amigos, nuestros vapers desechables son la opción ideal para aquellos que buscan conveniencia y calidad.</p>
-
-        <p>No esperes más para probar la mejor experiencia de vapeo. Explora nuestra selección y elige el vaper que más te guste. ¡Te garantizamos que no te decepcionará!</p>
-
-        <p><strong>¡Haz tu pedido hoy y descubre por qué somos la mejor opción en vapers desechables!</strong></p>
+    <main class="fade-in">
+        <h2>Bienvenido a Vapers Desechables</h2>
+        <p>Explora nuestra variedad de vapers desechables, perfectos para todos los gustos y necesidades.</p>
+        <div class="product-container">
+            <div class="product">
+                <div class="product-image">
+                    <img src="50k.jpeg" alt="Vaper de 50,000 Caladas">
+                </div>
+                <div class="product-info">
+                    <h3>Vaper de 50,000 Caladas</h3>
+                    <p>Una experiencia de vapeo excepcional.</p>
+                    <a href="50k.html">
+                        <button>Ver Producto</button>
+                    </a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="30K2.jpeg" alt="Vaper de 30,000 Caladas">
+                </div>
+                <div class="product-info">
+                    <h3>Vaper de 30,000 Caladas</h3>
+                    <p>Perfecto para el uso diario.</p>
+                    <a href="30k.html">
+                        <button>Ver Producto</button>
+                    </a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="30k.jpeg" alt="Vaper de 30,000 Caladas - Modelo 2">
+                </div>
+                <div class="product-info">
+                    <h3>Vaper de 30,000 Caladas - Modelo 2</h3>
+                    <p>Este modelo ofrece un diseño elegante y un sabor excepcional.</p>
+                    <a href="30k.html">
+                        <button>Ver Producto</button>
+                    </a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="25k.jpeg" alt="Vaper de 25,000 Caladas">
+                </div>
+                <div class="product-info">
+                    <h3>Vaper de 25,000 Caladas</h3>
+                    <p>Compacto y eficiente.</p>
+                    <a href="25k.html">
+                        <button>Ver Producto</button>
+                    </a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="8bbac4a1.jpeg" alt="Vaper de 12,000 Caladas">
+                </div>
+                <div class="product-info">
+                    <h3>Vaper de 12,000 Caladas</h3>
+                    <p>Perfecto para principiantes.</p>
+                    <a href="12k.html">
+                        <button>Ver Producto</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2023 Vapers Desechables. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/pucela.vapes/" target="_blank">Instagram</a>
+        </div>
     </footer>
-    <a href="https://api.whatsapp.com/send?phone=678488701" class="whatsapp_float" target="_blank">
-        <i class="fab fa-whatsapp whatsapp-icon"></i>
-    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const mainContent = document.querySelector('main');
+            mainContent.classList.add('active'); // Activa el efecto de desvanecimiento
+        });
+    </script>
 </body>
 </html>

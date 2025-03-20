@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="50k.html">50,000 Caladas</a></li>
+                <li><a href="30k.html">30,000 Caladas</a></li>
+                <li><a href="25k.html">25,000 Caladas</a></li>
+                <li><a href="12k.html">12,000 Caladas</a></li>
+            </ul>
+        </nav>
+        <a href="carrito.html" class="cart-icon" title="Ver Carrito">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </header>
+
+    <main>
+        <h2>Tu Carrito</h2>
+        <div class="cart-container" id="cart-container">
+            <!-- Los artículos se agregarán aquí dinámicamente -->
+        </div>
+
+        <div class="cart-summary" id="cart-summary">
+            <h3>Resumen del Carrito</h3>
+            <p>Total: <span id="total-price">$0.00</span></p>
+            <button onclick="proceedToCheckout()">Proceder a la Compra</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Vapers Desechables. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=678488701" class="whatsapp_float" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <script>
+        let cart = [];
+
+        // Cargar el carrito desde localStorage
+        function loadCart() {
+            if (localStorage.getItem('cart')) {
+                cart = JSON.parse(localStorage.getItem('cart'));
+            }
+            displayCart();
+        }
+
+        // Función para agregar un artículo al carrito
+        function addToCart(item) {
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        // Función para eliminar un artículo del carrito
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        // Función para mostrar el carrito
+        function displayCart() {
+            const cartContainer = document.getElementById('cart-container');
+            const totalPriceElement = document.getElementById('total-price');
+            cartContainer.innerHTML = ''; // Limpiar el contenedor
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-info">
+                        <h3>${item.name}</h3>
+                        <p>Precio: $${item.price.toFixed(2)}</p>
+                        <button onclick="removeFromCart(${index})">Eliminar</button>
+                    </div>
+                `;
+                cartContainer.appendChild(cartItem);
+                total += item.price;
+            });
+
+            totalPriceElement.innerText = `$${total.toFixed(2)}`;
+        }
+
+        // Llamar a la función de carga del carrito al cargar la página
+        window.onload = loadCart;
+    </script>
+</body>
+</html>
