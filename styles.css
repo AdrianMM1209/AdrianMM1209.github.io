@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+}
+
+header {
+    background: linear-gradient(90deg, #000, #333);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em; /* Aumenta el tamaño del título */
+    margin: 0;
+    letter-spacing: 2px; /* Espaciado entre letras para un efecto más elegante */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    color: #ff4081; /* Color destacado para el título */
+    margin-bottom: 40px; /* Espacio debajo del título */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333; /* Color más oscuro para el subtítulo */
+}
+
+nav {
+    margin-top: 40px; /* Espacio superior para la navegación */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0; /* Espacio alrededor de la lista de navegación */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Espacio entre los elementos de la lista */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    flex: 1; /* Permite que el main ocupe el espacio restante */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+p {
+    font-size: 1.1em; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 20px 0; /* Espacio arriba y abajo del párrafo */
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    border-radius: 8px; /* Bordes redondeados para el párrafo */
+    padding: 15px; /* Padding interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para la lista */
+ul {
+    list-style-position: inside; /* Coloca los puntos dentro del contenedor */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+li {
+    margin: 10px 0; /* Espacio entre los elementos de la lista */
+    padding-left: 20px; /* Espacio a la izquierda para los puntos */
+}
+
+button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 20px; /* Espacio superior para el botón */
+}
+
+button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Estilos para los productos */
+.product {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Asegura que el producto ocupe el ancho completo de la celda */
+    max-width: 400px; /* Ancho máximo del producto */
+    margin: 20px auto; /* Centra el producto y añade margen */}
+
+    .product:hover {
+        transform: scale(1.05); /* Aumenta el tamaño del producto al pasar el ratón */
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+        z-index: 1; /* Asegura que el producto hover esté por encima de los demás */
+    }
+    
+    .product-image {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .product-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .product-info {
+        padding: 20px;
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+    
+    .product-info h2 {
+        font-size: 1.5em;
+        margin: 0 0 10px;
+    }
+    
+    .product-info p {
+        font-size: 1em;
+        margin: 0 0 20px;
+    }
+    
+    footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+    
+    footer .social-media {
+        margin-top: 10px;
+    }
+    
+    footer .social-media a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    
+    footer .social-media a:hover {
+        color: #ff4081; /* Color rosa al pasar el ratón sobre los enlaces de redes sociales */
+    }
+    /* para escritorio */
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.whatsapp-icon {
+    margin-top: 16px;
+}
+
+/* para móvil */
+@media screen and (max-width: 767px) {
+    .whatsapp-icon {
+        margin-top: 10px;
+    }
+
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+    }
+}
+.product-container {
+    display: flex; /* Utiliza flexbox para alinear los productos */
+    justify-content: center; /* Centra los productos horizontalmente */
+    gap: 20px; /* Espacio entre los productos */
+}
