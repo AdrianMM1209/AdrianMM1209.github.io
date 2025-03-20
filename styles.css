@@ -282,3 +282,24 @@ footer .social-media a:hover {
         margin: 0; /* Elimina el margen para evitar cortes */
     }
 }
+@media (max-width: 767px) {
+    nav ul {
+        padding: 0; /* Elimina el padding para evitar desbordamiento */
+        margin: 0; /* Elimina el margen para evitar desbordamiento */
+        width: 100%; /* Asegura que el contenedor de navegación ocupe el ancho completo */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    }
+
+    nav ul li {
+        display: block; /* Cambia a bloque para apilar los elementos */
+        margin: 5px 0; /* Espacio entre los elementos de la lista */
+        text-align: center; /* Centra el texto en los elementos de la lista */
+    }
+
+    nav ul li a {
+        display: block; /* Asegura que el enlace ocupe todo el ancho del elemento */
+        padding: 10px; /* Añade padding para que el enlace sea más fácil de tocar */
+        width: 100%; /* Asegura que el enlace ocupe el ancho completo */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    }
+}
