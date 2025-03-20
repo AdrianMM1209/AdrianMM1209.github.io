@@ -283,16 +283,22 @@ footer .social-media a:hover {
     }
 }
 @media (max-width: 767px) {
+    nav {
+        overflow-x: hidden; /* Evita el desplazamiento horizontal en la navegación */
+    }
+
     nav ul {
         padding: 0; /* Elimina el padding para evitar desbordamiento */
         margin: 0; /* Elimina el margen para evitar desbordamiento */
         width: 100%; /* Asegura que el contenedor de navegación ocupe el ancho completo */
-        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        display: flex; /* Usa flexbox para alinear los elementos */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: center; /* Centra los elementos en la navegación */
     }
 
     nav ul li {
-        display: block; /* Cambia a bloque para apilar los elementos */
-        margin: 5px 0; /* Espacio entre los elementos de la lista */
+        flex: 1 1 auto; /* Permite que los elementos se ajusten automáticamente */
+        margin: 5px; /* Espacio entre los elementos de la lista */
         text-align: center; /* Centra el texto en los elementos de la lista */
     }
 
@@ -301,5 +307,6 @@ footer .social-media a:hover {
         padding: 10px; /* Añade padding para que el enlace sea más fácil de tocar */
         width: 100%; /* Asegura que el enlace ocupe el ancho completo */
         box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+        text-align: center; /* Centra el texto del enlace */
     }
 }
